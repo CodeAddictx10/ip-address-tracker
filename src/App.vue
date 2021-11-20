@@ -45,7 +45,7 @@ export default {
         async getIpInfo(ip) {
             try {
                 const data = await axios.get(
-                    `https://geo.ipify.org/api/v1?apiKey=at_p4G5N2PjUDkqKYA6FyeWN7nXZXWgi&ipAddress=${ip}`,
+                    `https://geo.ipify.org/api/v1?apiKey=${process.env.VUE_APP_GEO_IP}&ipAddress=${ip}`,
                 );
 
                 let ipInfo = {
@@ -91,7 +91,7 @@ export default {
         this.getUserIP();
         this.mapid = L.map(this.$refs["mapid"]).setView([51.505, -0.09], 13);
         L.tileLayer(
-            "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiY29kZWFkZGNpdCIsImEiOiJja3c3Znpzc3QwNGExMnZzM2M4NG8yNmxoIn0.GT4I9Y2Aytq6snVZEdr7vQ",
+            `https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${process.env.VUE_APP_MAP_BOX}`,
             {
                 attribution:
                     'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -99,8 +99,7 @@ export default {
                 id: "mapbox/streets-v11",
                 tileSize: 512,
                 zoomOffset: -1,
-                accessToken:
-                    "pk.eyJ1IjoiY29kZWFkZGNpdCIsImEiOiJja3c3Znpzc3QwNGExMnZzM2M4NG8yNmxoIn0.GT4I9Y2Aytq6snVZEdr7vQ",
+                accessToken: process.env.VUE_APP_MAP_BOX,
             },
         ).addTo(this.mapid);
     },
