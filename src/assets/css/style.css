@@ -112,12 +112,11 @@ body {
     .upper-section {
         padding: 0 20px;
         padding-top: 20px;
-        height: 300px;
     }
 
     .information-box {
         height: 400px;
-        top: -150px;
+        top: -80px;
         padding: 0 20px;
         background-color: transparent;
         width: 100%;
