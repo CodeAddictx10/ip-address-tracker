@@ -1,19 +1,8 @@
 # ip-address-tracker
 
-## Project setup
-```
-npm install
-```
+Features of the app:
+-User can see their own IP address on the map on the initial page load
+-User can search for any IP addresses or domains and see information like (IP, Location, ISP, Timezone)
+on the page.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+---

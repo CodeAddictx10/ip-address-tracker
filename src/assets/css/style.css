@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+    --v-dark-grey: hsl(0, 0%, 17%);
+    --dark-grey: hsl(0, 0%, 59%);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: "Rubik", sans-serif;
+    overflow: hidden;
+}
+
+/* upper section */
+.upper-section {
+    background: url("../images/pattern-bg.png") no-repeat center/cover;
+    width: 100%;
+    height: 200px;
+}
+
+.heading-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+.heading-wrapper h3 {
+    color: white;
+}
+.ip-search-wrapper {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.ip-search-wrapper .ip-search-input {
+    width: 400px;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid var(--v-dark-grey);
+    border-radius: 10px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.ip-search-wrapper .icon-wrapper {
+    background-color: var(--v-dark-grey);
+    padding: 10px 15px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+}
+.ip-search-wrapper .icon-wrapper:hover {
+    background-color: var(--dark-grey);
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.information-box {
+    background-color: #fff;
+    border-radius: 10px;
+    width: 850px;
+    padding: 0 8px 0px 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
+    position: absolute;
+    top: -30px;
+    bottom: 0;
+    z-index: 9999;
+}
+.information-box .desc-box {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.information-box .box {
+    border-right: 1px solid var(--dark-grey);
+    padding: 10px 30px;
+    text-align: center;
+    height: 95px;
+}
+.information-box .desc-box .box:last-child {
+    border-right: 0;
+}
+.information-box .desc-box small {
+    margin: 10px 0px;
+    color: var(--dark-grey);
+    display: block;
+}
+
+.information-box .desc-box h4 {
+    color: var(--v-dark-grey);
+}
+.map-section {
+    height: 900px;
+}
+#mapid {
+    height: 800px;
+}
+@media screen and (max-width: 764px) {
+    .upper-section {
+        padding: 0 20px;
+        padding-top: 20px;
+    }
+
+    .information-box {
+        height: 400px;
+        top: -80px;
+        padding: 0 20px;
+        background-color: transparent;
+        width: 100%;
+    }
+
+    .information-box .desc-box {
+        flex-direction: column;
+        height: 350px;
+        border-radius: 15px;
+        background-color: white;
+    }
+    .information-box .box {
+        border-right: 0;
+        width: 100%;
+    }
+}
