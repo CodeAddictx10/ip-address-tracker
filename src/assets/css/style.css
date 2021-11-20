@@ -127,7 +127,7 @@ body {
         flex-direction: column;
         height: 350px;
         border-radius: 15px;
-        background-color: white;
+        background-color: #fff;
     }
     .information-box .box {
         border-right: 0;
