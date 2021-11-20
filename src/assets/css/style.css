@@ -109,6 +109,9 @@ body {
     height: 800px;
 }
 @media screen and (max-width: 764px) {
+    body {
+        overflow-y: scroll;
+    }
     .upper-section {
         padding: 0 20px;
         padding-top: 20px;
